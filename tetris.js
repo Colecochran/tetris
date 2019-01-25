@@ -248,30 +248,44 @@ document.addEventListener('keydown', event => {
 	}
 	
 	if (event.keyCode == 65){ // moves object left by pressing the "A"
-		playerMove(-1);
+		if(status == run){
+			playerMove(-1);
+		}
 	}
 	
 	if (event.keyCode == 39){ // moves object right by pressing the right arrow
-		playerMove(1);
+		if(status == run){
+			playerMove(1);
+		}
 	}
 	
 	if (event.keyCode == 68){ // moves object right by pressing the "D"
-		playerMove(1);
+		if(status == run){
+			playerMove(1);
+		}
 	}
 	
 	if (event.keyCode == 40){ // moves object down by pressing the down arrow
-		playerDrop();
+		if(status == run){
+			playerDrop();
+		}
 	}
 	
 	if (event.keyCode == 83){ // moves object down by pressing the "S"
-		playerDrop();		
+		if(status == run){
+			playerDrop();	
+		}	
 	}
 		
 	if (event.keyCode == 87){ // rotates object clockwise
-		playerRotate(1);
+		if(status == run){
+			playerRotate(1);
+		}	
 	}
 	if (event.keyCode == 38){ // rotates object clockwise
-		playerRotate(1);
+		if(status == run){
+			playerRotate(1);
+		}
 	}
 	if (event.keyCode == 80){ // pauses game with the press of "P"
 		if (status == run){
@@ -291,8 +305,3 @@ document.addEventListener('keydown', event => {
 playerReset(); // runs playerReset function
 updateScore(); //runs updateScore function
 update(); //runs update function
-
-
-
-
-
