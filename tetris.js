@@ -295,11 +295,13 @@ document.addEventListener('keydown', event => {
 		}
 	}
 	if (event.keyCode == 82){ // resets game with the press of "R"
-		playerReset();
-		arena.forEach(row => row.fill(0)); // clears canvas of objects
-		player.score = 0;
-		updateScore();
-		draw();
+		if (status == run){
+			playerReset();
+			arena.forEach(row => row.fill(0)); // clears canvas of objects
+			player.score = 0;
+			updateScore();
+			draw();
+		}
 	}
 });
 playerReset(); // runs playerReset function
